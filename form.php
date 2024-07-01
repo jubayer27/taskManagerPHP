@@ -32,8 +32,9 @@
             else{
                 echo "Connection successful";
                 
-                $sql = "INSERT INTO `feedback` ( `Name`, `Phone`, `Email`, `Feedback`,   `Date`) VALUES ('$name, '$phone', '$email', '$feedback', current_timestamp())";
-                $result = mysqli_query($conn, $sql);
+                
+                $sql = "INSERT INTO `feedback` (`Name`, `Phone`, `Email`, `Feedback`, `Date`) VALUES ('$name', '$phone', '$email', '$feedback', current_timestamp())";
+$result = mysqli_query($conn, $sql);
 
                 if($result){
                     echo'<div class="alert alert-success" role="alert">
